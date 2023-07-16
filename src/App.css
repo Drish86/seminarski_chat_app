@@ -1,0 +1,103 @@
+.App {
+  display: flex;
+  background-color:rgb(251, 249, 212);
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.App-header {
+  background-color: #2c7e5e ; 
+  background-image: url(/public/mstile-70x70.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  text-align: center; 
+  text-shadow: #154231 4px 5px 3px ;
+  color: rgb(228, 224, 205);
+}
+
+.Messages-list {
+  padding: 20px 0;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.Messages-message {
+  display: flex;
+  margin-top: 10px;
+}
+
+.Messages-message.currentMember {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Message-content {
+  display: inline-block;
+}
+
+.currentMember > .Message-content {
+  align-items: flex-end;
+}
+
+.Messages-message > .avatar {
+  height: 35px;
+  width: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px -10px;
+}
+
+.Message-content > .username {
+  display: block;
+  color: rgb(20, 0, 236);
+  font-size: 15px;
+  padding-bottom: 4px;
+}
+
+.Message-content > .text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 10px;
+  border: rgb(207, 206, 206) 2px solid;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  display: inline-block;
+}
+
+.currentMember > .Message-content .text {
+  background-color: rgb(255, 255, 255);
+}
+
+form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px  solid #2c7e5e;
+  flex-grow: 1;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #2c7e5e;
+  color: rgb(255, 255, 255);
+  border: 2px solid #154231;
+  border-radius: 10px;
+  margin-left: 10px;
+}
